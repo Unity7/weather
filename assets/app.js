@@ -76,7 +76,7 @@ function capitalString(string) {
 //function to get city coordinates based on searchTerm // ******FUNCTION: GET COORDINATES ******
 function getCoordinates(formatedSearchTerm) {
   urlCoordinates =
-    "http://api.openweathermap.org/geo/1.0/direct?q=" +
+    "https://api.openweathermap.org/geo/1.0/direct?q=" +
     formatedSearchTerm +
     ",US&limit=1&appid=1d4e06b70edabe539b04ef4010633116";
   $.ajax(urlCoordinates, {
@@ -131,7 +131,7 @@ function clearHistory() {
 function getWeatherCurrent(lat, long) {
   //sets the URL and concatenate with the user's input
   urlCurrent =
-    "http://api.openweathermap.org/data/2.5/onecall?lat=" +
+    "https://api.openweathermap.org/data/2.5/onecall?lat=" +
     searchLat +
     "&lon=" +
     searchLong +
@@ -155,7 +155,7 @@ function displayCurrent(data) {
   //grab icon information and create the url + img & append to header
   var iconcode = data.current.weather[0].icon;
   var headertext = formatedSearchTerm + " " + currentDay;
-  var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+  var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
   var $h3 = $("<h3>").html(headertext);
   var $img = $("<img>");
   $img.attr("src", iconurl);
@@ -214,7 +214,7 @@ function displayForecast(data) {
 
   //grab icon information and create the url + img & append to header
   // var iconcode = data.current.weather[0].icon;
-  // var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+  // var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
 
   var headertext = "5-Day Forecast";
   var $h3 = $("<h3>").html(headertext);
@@ -238,7 +238,7 @@ function displayForecast(data) {
     //create the img and div for the icon
     var $img = $("<img>");
     var icon = data.daily[i].weather[0].icon;
-    var iconUrl = "http://openweathermap.org/img/w/" + icon + ".png";
+    var iconUrl = "https://openweathermap.org/img/w/" + icon + ".png";
     $img.attr("src", iconUrl);
 
     $card.append($img);
