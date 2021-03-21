@@ -68,7 +68,7 @@ function getSearchTerm() {
   }
 }
 
-//Function to capitalize the first letter of a string
+//Function to capitalize the first letter of a string// ** FUNCTION ** CAPITALIZE THE FIRST LETTER OF SEARCH INPUT
 function capitalString(string) {
   formatedSearchTerm = string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -113,7 +113,7 @@ function getLS() {
   }
 }
 
-//function to display the search history of cities entered into input
+//function to display the search history of cities entered into input// ** FUNCTION ** DISPLAY THE HISTORICAL SEARCHES
 function displayHistory(city) {
   for (var i = 0; i < cities.length; i++) {
     $city = $("<div>").addClass("card history col-lg-12");
@@ -122,12 +122,11 @@ function displayHistory(city) {
   }
 }
 
-//function clear history
+//function clear history// ** FUNCTION ** REFRESH HISTORICAL SEARCHES
 function clearHistory() {
   $(".history").remove();
 }
 
-//api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,minutely,alerts&appid=1d4e06b70edabe539b04ef4010633116&units=imperial
 //function to call url for current day's weather conditions by city name // ****** AJAX ** GET CURRENT WEATHER ******
 function getWeatherCurrent(lat, long) {
   //sets the URL and concatenate with the user's input
@@ -209,7 +208,7 @@ function displayCurrent(data) {
   $resultCurrent.addClass("border border-primary");
 }
 
-//function to display the current weather conditions // ****** DISPLAY CURRENT WEATHER ******
+//function to display the current weather conditions // ****** DISPLAY 5 DAY FORECAST ******
 function displayForecast(data) {
   //display the header
 
