@@ -6,3 +6,25 @@ header {
 .result-current {
   padding: 10px 30px 30px 30px;
 }
+
+main {
+  padding: 0px;
+  margin: 0px;
+}
+
+.paddingWeather {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardPadding {
+  margin: 2px 10px 10px 2px;
+  padding: 2px 10px 10px 2px;
+  text-align: center;
+}
+
+.history:hover {
+  background-color: rgb(83, 78, 78);
+  color: white;
+}
